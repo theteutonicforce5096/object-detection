@@ -1,0 +1,54 @@
+{
+  "version": "2025.0",
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 3.579408187431664,
+        "y": 6.361922564801334
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 2.894013510370331,
+        "y": 6.521829631902971
+      },
+      "isLocked": false,
+      "linkedName": "Left Trench Starting Pose"
+    },
+    {
+      "anchor": {
+        "x": 2.7734120370370374,
+        "y": 7.153665436921297
+      },
+      "prevControl": {
+        "x": 2.6079394663168785,
+        "y": 6.854551816972507
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "Left Trench Hub"
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [],
+  "pointTowardsZones": [],
+  "eventMarkers": [],
+  "globalConstraints": {
+    "maxVelocity": 3.0,
+    "maxAcceleration": 3.0,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0,
+    "nominalVoltage": 12.0,
+    "unlimited": false
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": -52.000190505693446
+  },
+  "reversed": false,
+  "folder": null,
+  "idealStartingState": {
+    "velocity": 0.0,
+    "rotation": -90.0
+  },
+  "useDefaultConstraints": true
+}
