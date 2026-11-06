@@ -166,11 +166,11 @@ class Vision(Subsystem):
         current_pose = self.get_current_swerve_state().pose
 
         for camera_index, (name, camera, robot_to_cam) in enumerate(self.cameras[-2:]):
-            fuel_pose = self.detect_fuel(camera, current_pose, robot_to_cam)
+            fuel_pose = self.detect_fuel(name, camera, current_pose, robot_to_cam)
             if fuel_pose != None:
-                PrintCommand(f"Pose of fuel is ({fuel_pose.X()}, {fuel_pose.Y()})").schedule()
+                PrintCommand(f"{name} detects fuel at ({fuel_pose.X()}, {fuel_pose.Y()})").schedule()
             
-    def detect_fuel(self, 
+    def detect_fuel(self, name,
                       camera: PhotonCamera, 
                       robot_pose: Pose2d, 
                       robot_to_cam: Transform3d
@@ -199,8 +199,9 @@ class Vision(Subsystem):
             fuel_pitch = fuel.getPitch()
 
             # Calculate distance from camera to fuel
-            x_distance = (robot_to_cam.Z() - (self.fuel_diameter / 2)) / tan(radians(fuel_pitch))
+            x_distance = (robot_to_cam.Z() - (self.fuel_diameter / 2)) / tan(-radians(fuel_pitch))
             y_distance = x_distance * tan(radians(fuel_yaw))
+            print(f"{name}: X distance - {x_distance}, Y distance - {y_distance}.")
 
             # Create Transform2d for camera to fuel
             # Set angle to 0 because rotation of a sphere is irrelevant.
