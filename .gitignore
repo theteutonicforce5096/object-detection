@@ -5,6 +5,7 @@ networktables.json
 simgui-ds.json
 simgui-window.json
 simgui.json
+*.cache
 
 # MacOS specific file
 .DS_Store
