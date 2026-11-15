@@ -1,0 +1,6 @@
+path: data/annotated
+train: train/images
+val: valid/images
+
+nc: 1
+names: ['Fuel']
