@@ -1,11 +1,14 @@
-# FRC Specific Files
+# FRC specific files
 ctre_sim/
 logs/
 networktables.json
 simgui-ds.json
 simgui-window.json
 simgui.json
+
+# YOLO training specific files
 *.cache
+*.npy
 
 # MacOS specific file
 .DS_Store
