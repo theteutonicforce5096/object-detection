@@ -192,7 +192,6 @@ class Vision(Subsystem):
 
         # If the detected object is a fuel and there are multiple, get the one with the biggest area of
         # bounding box.
-        # TODO: Math is completely wrong. Recheck calculations.
         if (fuel := latest_result.getBestTarget()) is not None and fuel.objDetectId == 0:
             # Get yaw and pitch of detected fuel in degrees
             fuel_yaw = fuel.getYaw()
